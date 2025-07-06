@@ -1,0 +1,46 @@
+export default function SneakPeak() {
+    const projects = [
+      {
+        title: 'ROS Mecanum Robot',
+        description: 'Simulated a mecanum-drive robot in Gazebo using ROS 2 and SLAM Toolbox for autonomous navigation.',
+        image: '/assets/ros-mecanum.png', // Replace with actual image path
+      },
+      {
+        title: 'VEX Worlds Finalist',
+        description: 'Led software for a high-performing VEX team, reaching the World Championship with custom odometry.',
+        image: '/assets/vex-robot.png',
+      },
+      {
+        title: 'LangChain AI Tools',
+        description: 'Built AI-powered tools with LangChain for automation and natural language interfaces.',
+        image: '/assets/langchain-project.png',
+      },
+    ];
+  
+    return (
+      <section id="projects" className="py-20 px-6 max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Sneak Peek</h2>
+  
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+              <img src={project.image} alt={project.title} className="h-48 w-full object-cover" />
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 text-sm">{project.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+  
+        <div className="text-center mt-12">
+          <a href="#projects">
+            <button className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">
+              View All Projects
+            </button>
+          </a>
+        </div>
+      </section>
+    );
+  }
+  
