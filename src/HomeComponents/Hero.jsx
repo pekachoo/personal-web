@@ -1,8 +1,21 @@
+import { useEffect, useState } from 'react';
+
 export default function Hero() {
+    const [fadeIn, setFadeIn] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFadeIn(true);
+        }, 1000); // delay 1 sec
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
       <section className="flex flex-col md:flex-row justify-between items-center px-6 py-16">
         <div className="max-w-xl">
-          <h1 className="text-5xl font-bold mb-4">Welcome!</h1>
+          <h1 className={'text-5xl font-bold mb-4 transition-opacity duration-1000 ${fadeIn ? 'opacity-0' : 'opacity-100'}'}>Welcome!</h1>
+          
           <p className="text-red-600 text-2xl font-bold mb-2">Hey! I'm Jason.</p>
           <p className="text-lg mb-6">
             I’m a first-year computer science student at the University of Waterloo,

@@ -4,14 +4,19 @@ import { createRoot } from 'react-dom/client'
 // import './index.css'
 import Home from './Home.jsx'
 import AboutMe from './AboutMe.jsx'
+import ProjectPage from './ProjectPage.jsx';
+import ContactPage from './ContactPage.jsx';
+import OpeningTransition from './OpeningTransition.jsx';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<OpeningTransition />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<AboutMe />} />
-        {/* <Route path="/contact" element={<ContactPage />} /> */}
+        <Route path="/projects" element={<ProjectPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
