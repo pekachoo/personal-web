@@ -3,14 +3,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import './index.css'
 import Home from './Home.jsx'
+import AboutMe from './AboutMe.jsx'
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutMe />} />
+        {/* <Route path="/contact" element={<ContactPage />} /> */}
       </Routes>
     </Router>
   );
@@ -18,6 +19,6 @@ function App() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home />
+    <App />
   </StrictMode>,
 )

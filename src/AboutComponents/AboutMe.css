@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section {
+    @apply py-16 px-6 max-w-7xl mx-auto;
+}
+  
+.section-title {
+    @apply text-3xl font-bold text-gray-900 mb-6;
+}
+
+.section-subtitle {
+    @apply text-lg text-gray-600 mb-4;
+}
+
+.button-primary {
+    @apply bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition;
+}
+
+.card {
+    @apply bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition;
+}

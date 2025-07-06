@@ -1,4 +1,4 @@
-import Navbar from './HomeComponents/Navbar.jsx'
+import Navbar from './ConstantComponents/Navbar.jsx'
 import Hero from './HomeComponents/Hero.jsx'
 import SneakPeak from './HomeComponents/SneakPeak.jsx'
 import './HomeComponents/Home.css'
