@@ -12,7 +12,7 @@ export default function SneakPeek() {
           observer.disconnect(); // Stop observing after it's visible once
         }
       },
-      { threshold: 0.4 } // Trigger when 10% of the section is visible
+      { threshold: 0.8 } // Trigger when 10% of the section is visible
     );
 
     if (ref.current) {
@@ -44,7 +44,7 @@ export default function SneakPeek() {
     <section
       id="projects"
       ref={ref}
-      className={`py-20 px-6 max-w-7xl mx-auto transition-opacity duration-1500 ${
+      className={`py-20 px-6 max-w-7xl mx-auto transition-opacity duration-500 ${
         visible ? 'opacity-100' : 'opacity-0'
       }`}
     >
