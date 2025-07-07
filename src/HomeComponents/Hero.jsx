@@ -20,14 +20,21 @@ export default function Hero() {
   useEffect(() => {
     const timer2 = setTimeout(() => {
       setVisibleText(true);
-    }, text.length * typingSpeed + 1000); //ddelay 500 after typing effect
+    }, text.length * typingSpeed + 1000); //delay 1000 after typing effect
     return () => clearTimeout(timer2);
   }, []);
 
   useEffect(() => {
     const timer3 = setTimeout(() => {
       setImageFade(true);
-    }, text.length * typingSpeed + 1500); //ddelay 500 after typing effect
+    }, text.length * typingSpeed + 1500); //ddelay 1500 after typing effect
+    return () => clearTimeout(timer3);
+  }, []);
+
+  useEffect(() => {
+    const timer3 = setTimeout(() => {
+      setShowScroll(true);
+    }, text.length * typingSpeed + 2500);
     return () => clearTimeout(timer3);
   }, []);
 
@@ -65,7 +72,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
-        <div className="animate-bounce text-6xl text-gray-600 hover:text-black transition duration-300 cursor-pointer">
+        <div className={`animate-bounce text-6xl text-gray-600 hover:text-black transition duration-300 cursor-pointer ${showScroll ? 'opacity-100' : 'opacity-0'}`}>
           ↓
         </div>
       </div>

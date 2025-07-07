@@ -1,10 +1,31 @@
+import React, { useEffect, useState } from 'react';
+
 export default function About() {
+  const [fadeText, setFadeText] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeText(true);
+    }, 400); //delay 1000 after typing effect
+    return () => clearTimeout(timer);
+  }, []);
+
+  const [fadeImage, setFadeImage] = useState(false);
+
+  useEffect(() => {
+    const timer2 = setTimeout(() => {
+      setFadeImage(true);
+    }, 1500); //delay 1000 after typing effect
+    return () => clearTimeout(timer2);
+  }, []);
+
   return (
-    <section id="about" className="px-6 py-24 max-w-7xl mx-auto">
+    <section id="about" className="flex flex-col md:flex-row justify-between items-center px-6 py-36 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row items-start md:items-center gap-12">
-        {/* Text Content */}
-        <div className="flex-1">
-          <h2 className="text-5xl font-bold mb-6">About Me</h2>
+        <div className={`flex-1 transition-opacity duration-1000 ${
+          fadeText ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <h2 className="text-5xl after:font-bold mb-6 py-5">About Me</h2>
           <p className="text-lg text-gray-800 leading-relaxed mb-6">
             I’m a first year computer science student at the University of Waterloo. I’ve found my passion for computer science from being software lead for my FTC Robotics team 18844. Despite being a computer science major, I actually love engineering and tinkering for projects (you can see some of my projects in the projects tab).
           </p>
@@ -13,10 +34,11 @@ export default function About() {
           </p>
         </div>
 
-        {/* Image */}
-        <div className="flex-shrink-0">
+        <div className={`flex-shrink-0 border-4 border-gray-200 rounded-lg shadow-lg p-2 bg-white transition-opacity duration-1000 ${
+          fadeImage ? 'opacity-100' : 'opacity-0'
+        }`}>
           <img
-            src="/assets/your-photo.jpg" // replace with your actual image path
+            src="/src/assets/IMG_5002_2.jpg" // replace with your actual image path
             alt="Jason Liu"
             className="w-96 h-auto object-cover rounded-lg shadow-lg"
           />
