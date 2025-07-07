@@ -6,6 +6,7 @@ export default function Hero() {
 
   const [visibleText, setVisibleText] = useState(false);
   const [imageFade, setImageFade] = useState(false);
+  const [showScroll, setShowScroll] = useState(false);
   const typingSpeed = 100;
   useEffect(() => {
     if (visibleLetters < text.length) {
@@ -31,7 +32,7 @@ export default function Hero() {
   }, []);
 
   return (
-  <section className="min-h-screen flex flex-col md:flex-row justify-between items-center px-6 py-16">
+    <section className="min-h-screen flex flex-col md:flex-row justify-between items-center px-6 py-16">      
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
         <div className="max-w-xl">
           <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">
@@ -63,6 +64,12 @@ export default function Hero() {
           />
         </div>
       </div>
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2">
+        <div className="animate-bounce text-6xl text-gray-600 hover:text-black transition duration-300 cursor-pointer">
+          ↓
+        </div>
+      </div>
+
     </section>
 
   );

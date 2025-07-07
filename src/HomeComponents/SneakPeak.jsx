@@ -7,12 +7,9 @@ export default function SneakPeek() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect(); // Stop observing after it's visible once
-        }
+        setVisible(entry.isIntersecting);
       },
-      { threshold: 0.8 } // Trigger when 10% of the section is visible
+      { threshold: 0.4 } // Trigger when 80% of the section is visible
     );
 
     if (ref.current) {
@@ -44,9 +41,9 @@ export default function SneakPeek() {
     <section
       id="projects"
       ref={ref}
-      className={`py-20 px-6 max-w-7xl mx-auto transition-opacity duration-500 ${
-        visible ? 'opacity-100' : 'opacity-0'
-      }`}
+      className={`px-6 pt-10 md:pt-20 pb-20 max-w-7xl mx-auto transition-all duration-700 ease-in-out ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}      
     >
       <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Sneak Peek</h2>
 
