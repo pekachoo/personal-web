@@ -7,6 +7,7 @@ import AboutMe from './AboutMe.jsx'
 import ProjectPage from './ProjectPage.jsx';
 import ContactPage from './ContactPage.jsx';
 import OpeningTransition from './OpeningTransition.jsx';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <ParallaxProvider>
+      <App />
+    </ParallaxProvider>
   </StrictMode>,
 )

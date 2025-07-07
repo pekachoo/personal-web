@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
 export default function About() {
+  const [showScroll, setShowScroll] = useState(false);
   const [fadeText, setFadeText] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeText(true);
-    }, 400); //delay 1000 after typing effect
+    }, 400); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -15,12 +16,19 @@ export default function About() {
   useEffect(() => {
     const timer2 = setTimeout(() => {
       setFadeImage(true);
-    }, 1500); //delay 1000 after typing effect
+    }, 1500);
     return () => clearTimeout(timer2);
   }, []);
 
+  useEffect(() => {
+    const timer3 = setTimeout(() => {
+      setShowScroll(true);
+    }, 2000);
+    return () => clearTimeout(timer3);
+  }, []);
+
   return (
-    <section id="about" className="flex flex-col md:flex-row justify-between items-center px-6 py-36 max-w-7xl mx-auto">
+    <section id="about" className="flex flex-col md:flex-row justify-between items-center px-0 py-36 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row items-start md:items-center gap-12">
         <div className={`flex-1 transition-opacity duration-1000 ${
           fadeText ? 'opacity-100' : 'opacity-0'
@@ -42,6 +50,11 @@ export default function About() {
             alt="Jason Liu"
             className="w-96 h-auto object-cover rounded-lg shadow-lg"
           />
+        </div>
+      </div>
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
+        <div className={`animate-bounce text-6xl text-gray-600 hover:text-black transition duration-300 cursor-pointer ${showScroll ? 'opacity-100' : 'opacity-0'}`}>
+          ↓
         </div>
       </div>
     </section>
