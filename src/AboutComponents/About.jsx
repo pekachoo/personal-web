@@ -16,7 +16,7 @@ export default function About() {
   useEffect(() => {
     const timer2 = setTimeout(() => {
       setFadeImage(true);
-    }, 1500);
+    }, 1000);
     return () => clearTimeout(timer2);
   }, []);
 

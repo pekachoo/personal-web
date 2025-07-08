@@ -22,7 +22,7 @@ export default function OpeningTransition() {
       }`}
     >
       <h1 className="text-5xl font-bold text-white tracking-wide animate-pulse">
-        Welcome, I’m Jason
+        Loading Jason's Webpage...
       </h1>
     </div>
   );

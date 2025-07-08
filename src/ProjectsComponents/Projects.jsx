@@ -42,7 +42,6 @@ export default function Projects() {
           ))}
         </div>
   
-        {/* Side Projects Grid */}
         <h3 className="text-xl font-semibold text-gray-800 mb-6">Other Projects</h3>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
           {sideProjects.map((title, i) => (
