@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AboutIMG from '../assets/IMG_5002_2.jpg'; // replace with your actual image path
 
 export default function About() {
   const [showScroll, setShowScroll] = useState(false);
@@ -46,7 +47,7 @@ export default function About() {
           fadeImage ? 'opacity-100' : 'opacity-0'
         }`}>
           <img
-            src="/src/assets/IMG_5002_2.jpg" // replace with your actual image path
+            src={AboutIMG} // replace with your actual image path
             alt="Jason Liu"
             className="w-96 h-auto object-cover rounded-lg shadow-lg"
           />

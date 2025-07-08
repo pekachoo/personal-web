@@ -1,3 +1,5 @@
+import HeroIMG from '../assets/IMG_6073.jpg';
+
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
@@ -65,7 +67,7 @@ export default function Hero() {
 
         <div className={`mt-10 md:mt-0 md:ml-12 border-4 border-gray-200 rounded-lg shadow-lg p-2 bg-white transition-opacity duration-1000 ${imageFade ? 'opacity-100' : 'opacity-0'}`}>
           <img
-            src="src/assets/IMG_6073.jpg"
+            src={HeroIMG}
             alt="Hero"
             className="w-80 h-80 object-cover rounded-md"
           />
