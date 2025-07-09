@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
+import vexImage from '../assets/projects/vexworlds.jpg'
+import ftcImage from '../assets/projects/ftcworlds.jpg'
+
 
 export default function SneakPeek() {
   const ref = useRef(null);
@@ -21,19 +24,19 @@ export default function SneakPeek() {
 
   const projects = [
     {
-      title: 'ROS Mecanum Robot',
-      description: 'Simulated a mecanum-drive robot in Gazebo using ROS 2 and SLAM Toolbox.',
+      title: 'Gazebo AP Research Sim',
+      description: 'Simulated a mecanum-drive robot in Gazebo using ROS 2 and SLAM Toolbox. Wrote a paper on it which was used for my AP Research project (ended up getting a 5)',
       image: '/assets/ros-mecanum.png',
     },
     {
-      title: 'VEX Worlds Finalist',
-      description: 'Led software for a VEX team reaching Worlds with custom odometry.',
-      image: '/assets/vex-robot.png',
+      title: 'VEX Worlds!',
+      description: 'Led software for a VEX team reaching Worlds with custom odometry. ',
+      image: vexImage,
     },
     {
-      title: 'LangChain AI Tools',
-      description: 'Built AI-powered tools with LangChain for automation and NLP tasks.',
-      image: '/assets/langchain-project.png',
+      title: 'FTC Worlds!',
+      description: 'Took 5 years to do as software lead but we did it! One of my most proud accomplishments. Click to have a look at our library!',
+      image: ftcImage,
     },
   ];
 
@@ -45,7 +48,7 @@ export default function SneakPeek() {
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       }`}      
     >
-      <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Sneak Peek</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Things I've Done!</h2>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, index) => (

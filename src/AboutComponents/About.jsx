@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import AboutIMG from '../assets/IMG_5002_2.jpg'; // replace with your actual image path
+import React, { useEffect, useState, useRef } from 'react';
+import AboutIMG from '../assets/IMG_5002_2.jpg';
 
 export default function About() {
   const [showScroll, setShowScroll] = useState(false);
   const [fadeText, setFadeText] = useState(false);
+  const scrollTargetRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -27,6 +28,15 @@ export default function About() {
     }, 2000);
     return () => clearTimeout(timer3);
   }, []);
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
+  
 
   return (
     <section id="about" className="flex flex-col md:flex-row justify-between items-center px-0 py-36 max-w-7xl mx-auto">
@@ -54,7 +64,7 @@ export default function About() {
         </div>
       </div>
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2">
-        <div className={`animate-bounce text-6xl text-gray-600 hover:text-black transition duration-300 cursor-pointer ${showScroll ? 'opacity-100' : 'opacity-0'}`}>
+        <div onClick={scrollToBottom} className={`animate-bounce text-6xl text-gray-600 hover:text-black transition duration-300 cursor-pointer ${showScroll ? 'opacity-100' : 'opacity-0'}`}>
           ↓
         </div>
       </div>
