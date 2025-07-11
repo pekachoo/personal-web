@@ -3,9 +3,9 @@ import LILogo from '/logos/linkedin_logo.webp';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 py-6 mt-16">
+    <footer className="bg-gray-800 py-6 mt-16">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-gray-600 text-center md:text-left">
+        <p className="text-sm text-gray-100 text-center md:text-left">
           © 2024–2025 Created and Built by Jason Liu
         </p>
         <div className="flex space-x-6">
