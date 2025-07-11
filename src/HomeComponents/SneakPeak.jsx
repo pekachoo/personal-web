@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import vexImage from '../assets/projects/vexworlds.jpg';
-import ftcImage from '../assets/projects/ftcworlds.jpg';
+import vexImage from '/projects/vexworlds.jpg';
+import ftcImage from '/projects/ftcworlds.jpg';
 
 
 export default function SneakPeek() {

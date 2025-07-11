@@ -1,5 +1,5 @@
-import GitLogo from './assets/logos/github_logo.png';
-import LILogo from './assets/logos/linkedin_logo.webp';
+import GitLogo from '/logos/github_logo.png';
+import LILogo from '/logos/linkedin_logo.webp';
 
 export default function ContactComponent() {
   return (

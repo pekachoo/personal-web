@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import AboutIMG from '../assets/IMG_5002_2.jpg';
+import AboutIMG from '/IMG_5002_2.jpg';
 
 export default function About() {
   const [showScroll, setShowScroll] = useState(false);

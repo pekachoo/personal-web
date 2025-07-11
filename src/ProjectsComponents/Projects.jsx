@@ -3,12 +3,12 @@ export default function Projects() {
       {
         title: 'ROS Mecanum Robot',
         description: 'Simulated a mecanum-drive robot in Gazebo using ROS 2, SLAM Toolbox, and Nav2. Compared performance to differential drive using dynamic obstacle courses.',
-        image: '/assets/placeholder1.jpg',
+        image: '/projects/ftc2bot.png',
       },
       {
         title: 'LangChain + AI Tools',
         description: 'Built a custom LangChain workflow for AI-powered lesson generation and integrated it into a production frontend with Spring Boot and React.',
-        image: '/assets/placeholder2.jpg',
+        image: '/projects/ftc1bot.png',
       },
     ];
   

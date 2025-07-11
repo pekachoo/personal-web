@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import HeroIMG from '../assets/IMG_6073.jpg';
+import HeroIMG from '/IMG_6073.jpg';
 
 export default function Hero() {
   const text = "Welcome!";
