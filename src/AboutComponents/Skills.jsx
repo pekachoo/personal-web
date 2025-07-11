@@ -15,6 +15,7 @@ import HTMLLogo from '/logos/html_logo.png';
 import SpringLogo from '/logos/spring_logo.svg';
 import LangChainLogo from '/logos/langchain_logo.webp';
 import { Parallax } from 'react-scroll-parallax';
+import { motion } from 'framer-motion';
 
 const roboticsLogos = [
   RosLogo,
@@ -39,34 +40,56 @@ const webDevLogos = [
 ];
 
 export default function Skills() {
+  const logoVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.08,
+        duration: 0.5,
+        ease: 'easeOut',
+      },
+    }),
+  };
   return (
-    <Parallax speed={40}>
-      <section id="skills" className="py-20 px-6 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <Parallax speed={20}>
+      <section id="skills" className="py-16 px-6 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-14 text-center tracking-tight drop-shadow">Skills</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-red-700 text-center">Robotics & AI</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+            <h3 className="text-2xl font-bold mb-6 text-red-700 text-center uppercase tracking-wide">Robotics & AI</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-8">
               {roboticsLogos.map((logo, i) => (
-                <div
+                <motion.div
                   key={i}
-                  className="flex items-center justify-center bg-white rounded-lg border border-gray-300 aspect-square p-1"
+                  className="flex items-center justify-center rounded-full shadow-lg bg-white/30 backdrop-blur-md border border-white/40 aspect-square p-2 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:ring-2 hover:ring-red-300"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  custom={i}
+                  variants={logoVariants}
                 >
                   <img src={logo} alt="robotics skill logo" className="object-contain w-12 h-12 sm:w-16 sm:h-16" />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-blue-800 text-center">Web Development</h3>
-            <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+            <h3 className="text-2xl font-bold mb-6 text-blue-800 text-center uppercase tracking-wide">Web Development</h3>
+            <div className="grid grid-cols-3 sm:grid-cols-4 gap-8">
               {webDevLogos.map((logo, i) => (
-                <div
+                <motion.div
                   key={i}
-                  className="flex items-center justify-center bg-white rounded-lg border border-gray-300 aspect-square p-4"
+                  className="flex items-center justify-center rounded-full shadow-lg bg-white/30 backdrop-blur-md border border-white/40 aspect-square p-2 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:ring-2 hover:ring-blue-300"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                  custom={i}
+                  variants={logoVariants}
                 >
                   <img src={logo} alt="web dev skill logo" className="object-contain w-12 h-12 sm:w-16 sm:h-16" />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
