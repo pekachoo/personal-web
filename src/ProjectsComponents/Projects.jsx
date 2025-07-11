@@ -62,14 +62,16 @@ export default function Projects() {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0 },
-    visible: {
+    hidden: { opacity: 0, boxShadow: '0 0 32px 8px rgba(59,130,246,0.4)' },
+    visible: (i = 1) => ({
       opacity: 1,
+      boxShadow: '0 4px 24px 0 rgba(59,130,246,0.10)',
       transition: {
-        duration: 0.7,
+        delay: i * 0.3,
+        duration: 1.0,
         ease: 'easeOut',
       },
-    },
+    }),
   };
 
   return (
@@ -89,6 +91,7 @@ export default function Projects() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
+            custom={index}
             variants={cardVariants}
             transition={{ delay: index * 0.12, duration: 0.7, ease: 'easeOut' }}
           >
@@ -124,9 +127,10 @@ export default function Projects() {
             className="p-4 rounded-lg shadow-sm hover:shadow-md transition transform hover:scale-[1.01] flex flex-col"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
+            custom={i}
             variants={cardVariants}
-            transition={{ delay: i * 0.12, duration: 0.7, ease: 'easeOut' }}
+            transition={{ delay: i * 0.25, duration: 1.5, ease: 'easeOut' }}
           >
             <img
               src={project.image}
