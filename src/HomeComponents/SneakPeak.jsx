@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import APRImage from './projects/APR.png';
+import APRImage from '/projects/APR.png';
 import vexImage from '/projects/vexworlds.jpg';
 import ftcImage from '/projects/ftcworlds.jpg';
 
