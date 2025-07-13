@@ -94,7 +94,9 @@ export default function Projects() {
         {featuredProjects.map((project, index) => (
           <motion.a
             key={index}
-            href="#"
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="shadow-md rounded-lg overflow-hidden hover:shadow-xl transition transform hover:scale-[1.01]"
             initial="hidden"
             whileInView="visible"
