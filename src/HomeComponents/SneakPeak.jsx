@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import APRImage from './projects/APR.png';
 import vexImage from '/projects/vexworlds.jpg';
 import ftcImage from '/projects/ftcworlds.jpg';
 
@@ -26,7 +27,7 @@ export default function SneakPeek() {
     {
       title: 'Gazebo AP Research Sim',
       description: 'Simulated a mecanum-drive robot in Gazebo using ROS 2 and SLAM Toolbox. Wrote a paper on it which was used for my AP Research project (ended up getting a 5)',
-      image: '/assets/ros-mecanum.png',
+      image: APRImage,
     },
     {
       title: 'VEX Worlds!',
