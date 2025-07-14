@@ -36,7 +36,7 @@ export default function SneakPeek() {
     },
     {
       title: 'FTC Worlds!',
-      description: 'Took 5 years to do as software lead but we did it! One of my most proud accomplishments. Click to have a look at our library!',
+      description: 'Took 5 years to do as software lead but we did it! One of my most proud accomplishments.',
       image: ftcImage,
     },
   ];

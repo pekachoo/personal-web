@@ -139,7 +139,6 @@ export default function Projects() {
         {sideProjects.map((project, i) => (
           <motion.a
             key={i}
-            href="#"
             className="p-4 rounded-lg shadow-sm hover:shadow-md transition transform hover:scale-[1.01] flex flex-col"
             initial="hidden"
             whileInView="visible"
