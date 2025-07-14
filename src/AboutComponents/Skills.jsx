@@ -55,10 +55,10 @@ export default function Skills() {
   return (
     <Parallax speed={20}>
       <section id="skills" className="py-16 px-6 max-w-6xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-14 text-center tracking-tight drop-shadow">Skills</h2>
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-14 text-center tracking-tight drop-shadow font-poppins">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-red-700 text-center uppercase tracking-wide">Robotics & AI</h3>
+            <h3 className="text-2xl font-bold mb-6 text-red-700 text-center uppercase tracking-wide font-poppins">Robotics & AI</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-8">
               {roboticsLogos.map((logo, i) => (
                 <motion.div
@@ -76,7 +76,7 @@ export default function Skills() {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-blue-800 text-center uppercase tracking-wide">Web Development</h3>
+            <h3 className="text-2xl font-bold mb-6 text-blue-800 text-center uppercase tracking-wide font-poppins">Web Development</h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-8">
               {webDevLogos.map((logo, i) => (
                 <motion.div

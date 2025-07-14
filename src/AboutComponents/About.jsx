@@ -44,11 +44,11 @@ export default function About() {
         <div className={`flex-1 transition-opacity duration-1000 ${
           fadeText ? 'opacity-100' : 'opacity-0'
         }`}>
-          <h2 className="text-5xl after:font-bold mb-6 py-5">About Me</h2>
-          <p className="text-lg text-gray-800 leading-relaxed mb-6">
+          <h2 className="text-5xl font-bold mb-6 py-5 font-poppins">About Me</h2>
+          <p className="text-lg text-gray-800 leading-relaxed mb-6 font-inter">
             I’m a first year computer science student at the University of Waterloo. I’ve found my passion for computer science from being software lead for my FTC Robotics team 18844. Despite being a computer science major, I actually love engineering and tinkering with projects (you can see some of my projects in the projects tab).
           </p>
-          <p className="text-lg text-gray-800 leading-relaxed">
+          <p className="text-lg text-gray-800 leading-relaxed font-inter">
             I feel like there's still so much I don't know about what computer science is, and I want to keep learning to see how far I can push the boundaries of software and technology—whether it’s developing a robot, building tools that solve real problems, or experimenting just for the fun of it! Feel free to shoot me an email or connect if you ever want to work on something, I’m always open to doing projects and getting to know people!
           </p>
         </div>

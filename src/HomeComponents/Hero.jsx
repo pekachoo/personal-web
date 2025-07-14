@@ -54,15 +54,15 @@ export default function Hero() {
       <section className="relative min-h-screen flex flex-col md:flex-row justify-between items-center px-6 py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
           <div className="max-w-xl">
-            <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">
+            <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight font-poppins">
               {
                 text.split('').slice(0, visibleLetters).join('') +
                 (visibleLetters < text.length ? '|' : '')
               }
             </h1>
             <div className={`transition-opacity duration-1000 ${visibleText ? 'opacity-100' : 'opacity-0'}`}>
-              <p className="text-2xl text-red-600 font-semibold mb-4">Hey! I'm Jason.</p>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl">
+              <p className="text-2xl text-red-600 font-semibold mb-4 font-inter">Hey! I'm Jason.</p>
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl font-inter">
                 I’m a first-year computer science student at the University of Waterloo,
                 passionate in robotics and software engineering. Contact me if you ever
                 want to work on anything!

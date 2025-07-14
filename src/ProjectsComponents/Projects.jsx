@@ -93,7 +93,7 @@ export default function Projects() {
       id="projects"
       className="py-20 px-6 max-w-7xl mx-auto"
     >
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Projects</h2>
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-12 font-poppins">Projects</h2>
 
       {/* Featured Projects */}
       <div className="grid md:grid-cols-2 gap-10 mb-16">
@@ -117,8 +117,8 @@ export default function Projects() {
               className="h-72 w-full object-cover transition-transform duration-300 hover:scale-105"
             />
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 text-sm mb-2">{project.description}</p>
+              <h3 className="text-xl font-semibold mb-2 font-poppins">{project.title}</h3>
+              <p className="text-gray-600 text-sm mb-2 font-inter">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-3">
                 {project.tags.map((tag, i) => (
                   <span
@@ -134,7 +134,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <h3 className="text-xl font-semibold text-gray-800 mb-6">Other Projects</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mb-6 font-poppins">Other Projects</h3>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
         {sideProjects.map((project, i) => (
           <motion.a
@@ -152,8 +152,8 @@ export default function Projects() {
               alt={project.title}
               className="h-48 w-full object-cover mb-4 rounded transition-transform duration-300 hover:scale-105"
             />
-            <h4 className="font-medium text-gray-800 text-sm mb-2">{project.title}</h4>
-            <p className="text-xs text-gray-500">{project.description}</p>
+            <h4 className="font-medium text-gray-800 text-sm mb-2 font-poppins">{project.title}</h4>
+            <p className="text-xs text-gray-500 font-inter">{project.description}</p>
             <div className="flex flex-wrap gap-2 mt-3">
               {project.tags &&
                 project.tags.map((tag, j) => (

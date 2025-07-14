@@ -36,14 +36,14 @@ export default function ContactComponent() {
       variants={containerVariants}
     >
       <motion.h2
-        className="text-4xl font-extrabold mb-10 text-center text-gray-900 drop-shadow-lg"
+        className="text-4xl font-extrabold mb-10 text-center text-gray-900 drop-shadow-lg font-poppins"
         variants={itemVariants}
       >
         Contact Me
       </motion.h2>
       <div className="flex flex-col md:flex-row justify-between gap-12 items-center">
         <div className="flex-1 space-y-8 text-center md:text-left">
-          <motion.p className="text-lg" variants={itemVariants}>
+          <motion.p className="text-lg font-inter" variants={itemVariants}>
             Feel free to{' '}
             <a href="mailto:liujason6162@gmail.com" className="text-blue-600 underline">
               email me at liujason6162@gmail.com
@@ -54,7 +54,7 @@ export default function ContactComponent() {
             </a>
             . I'm always open to chatting or working on something cool together!
           </motion.p>
-          <motion.p className="text-lg font-semibold" variants={itemVariants}>
+          <motion.p className="text-lg font-semibold font-inter" variants={itemVariants}>
             Find me on:
           </motion.p>
           <motion.div className="flex justify-center md:justify-start space-x-12 mt-6" variants={itemVariants}>
