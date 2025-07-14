@@ -46,7 +46,7 @@ export default function ContactComponent() {
           <motion.p className="text-lg" variants={itemVariants}>
             Feel free to{' '}
             <a href="mailto:liujason6162@gmail.com" className="text-blue-600 underline">
-              email me
+              email me at liujason6162@gmail.com
             </a>{' '}
             or connect on{' '}
             <a href="https://www.linkedin.com/in/jason-liu-646b30273/" className="text-blue-600 underline">

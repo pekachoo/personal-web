@@ -46,10 +46,10 @@ export default function About() {
         }`}>
           <h2 className="text-5xl after:font-bold mb-6 py-5">About Me</h2>
           <p className="text-lg text-gray-800 leading-relaxed mb-6">
-            I’m a first year computer science student at the University of Waterloo. I’ve found my passion for computer science from being software lead for my FTC Robotics team 18844. Despite being a computer science major, I actually love engineering and tinkering for projects (you can see some of my projects in the projects tab).
+            I’m a first year computer science student at the University of Waterloo. I’ve found my passion for computer science from being software lead for my FTC Robotics team 18844. Despite being a computer science major, I actually love engineering and tinkering with projects (you can see some of my projects in the projects tab).
           </p>
           <p className="text-lg text-gray-800 leading-relaxed">
-            I feel like I’ve only touched the surface of what computer science is and I want to keep learning and pushing myself to explore how far we could push the boundaries of software and technology. Whether it’s developing a robot, building tools that solve real problems, or experimenting just for the fun of it! Please shoot me an email or text if you ever want to work on something, I’m always open to doing projects and getting to know people!
+            I feel like I’ve only scratched the surface of what computer science is, and I want to keep learning and pushing myself to see how far I can push the boundaries of software and technology—whether it’s developing a robot, building tools that solve real problems, or experimenting just for the fun of it! Please shoot me an email or connect if you ever want to work on something, I’m always open to doing projects and getting to know people!
           </p>
         </div>
 
