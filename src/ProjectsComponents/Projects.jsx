@@ -22,7 +22,7 @@ export default function Projects() {
     {
       title: 'Curriculum Generator',
       description: 'Worked on during my summer internship at Wizrobotics. Worked on lesson component development using react to make widgets. Also restructured on the LangChain AI Agent that parses a pdf lesson into an interactive react lesson.',
-      image: '/projects/ftcworlds.jpg',
+      image: '/projects/wizwork.png',
       tags: ['LangChain', 'AI API', 'React', 'Javascript', 'Backend Development'],
     },
     {
@@ -81,7 +81,7 @@ export default function Projects() {
       opacity: 1,
       boxShadow: '0 4px 24px 0 rgba(59,130,246,0.10)',
       transition: {
-        delay: i * 0.3,
+        delay: i * 0.12,
         duration: 1.0,
         ease: 'easeOut',
       },
@@ -146,7 +146,7 @@ export default function Projects() {
             viewport={{ once: true, amount: 0.2 }}
             custom={i}
             variants={cardVariants}
-            transition={{ delay: i * 0.25, duration: 1.5, ease: 'easeOut' }}
+            transition={{ delay: i * 0.12, duration: 1.0, ease: 'easeOut' }}
           >
             <img
               src={project.image}
