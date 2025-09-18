@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 export default function Projects() {
   const featuredProjects = [
     {
-      title: 'DUM-E',
+      title: 'DUM-E - Hack the North Finalist',
       description: "DUM-E is an intelligent 5-DOF robotic arm built to bridge natural language understanding with real-world manipulation. Powered by a Raspberry Pi and Arduino, it uses OpenCV (homography, segmentation, skeleton models) to perceive its workspace and a multimodal LLM running on Groq to reason about tasks. Feedback loop + IK gave DUM-E free control over 3D space, all in real time. (Click the image for the devpost!)",
-      image: '/projects/DUME.jpg',
+      image: '/projects/DUME.JPEG',
       tags: ['Robotics',
       'Raspberry Pi',
       'Arduino',
@@ -14,7 +14,7 @@ export default function Projects() {
       'Inverse Kinematics',
       'LLM integration',
       'Python'],
-      link: 'https://voyager-o.ca/'
+      link: 'https://devpost.com/software/dum-e-kgx6at?ref_content=user-portfolio&ref_feature=in_progress'
     },
     {
       title: 'AP Research Mecanum + Diff Drive Simulation',
@@ -27,11 +27,22 @@ export default function Projects() {
 
   const sideProjects = [
     {
+      title: 'TurretGuard',
+      description: "TurretGuard is an AI-powered rescue turret that detects drowning behavior in real time and launches an inflatable buoy with pinpoint accuracy. Built with a Raspberry Pi, Arduino, YOLOv8, and PID-controlled flywheels, it combines deep learning, physics-based targeting, and robust circuitry to deliver immediate flotation support. (Earned 1st Place Overall and Best Hardware Hack at Hack the 6ix!)",
+      image: '/projects/TG.jpg',
+      tags: ['Raspberry Pi',
+      'Arduino',
+      'YOLOv8',
+      'Computer Vision',
+      'PID Control',
+      'Python']
+    },
+    {
       title: 'Voyager-O',
       description: "NASA Space Apps project that led us to global nominees! Used three.js and NASA's star data to convert and simulate what the starry sky looks like on other planets. (Click the image to try the project!)",
       image: '/projects/spaceapps.png',
       tags: ['Three.js', 'Javascript', 'Fetch API', 'Frontend Development', 'WebGL'],
-    }
+    },
     {
       title: 'Curriculum Generator',
       description: 'Worked on during my summer internship at Wizrobotics. Worked on lesson component development using react to make widgets. Also restructured on the LangChain AI Agent that parses a pdf lesson into an interactive react lesson.',
