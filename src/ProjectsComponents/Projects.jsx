@@ -3,10 +3,17 @@ import { motion } from 'framer-motion';
 export default function Projects() {
   const featuredProjects = [
     {
-      title: 'Voyager-O',
-      description: "NASA Space Apps project that led us to global nominees! Used three.js and NASA's star data to convert and simulate what the starry sky looks like on other planets. (Click the image to try the project!)",
-      image: '/projects/spaceapps.png',
-      tags: ['Three.js', 'Javascript', 'Fetch API', 'Frontend Development', 'WebGL'],
+      title: 'DUM-E',
+      description: "DUM-E is an intelligent 5-DOF robotic arm built to bridge natural language understanding with real-world manipulation. Powered by a Raspberry Pi and Arduino, it uses OpenCV (homography, segmentation, skeleton models) to perceive its workspace and a multimodal LLM running on Groq to reason about tasks. Feedback loop + IK gave DUM-E free control over 3D space, all in real time. (Click the image for the devpost!)",
+      image: '/projects/DUME.jpg',
+      tags: ['Robotics',
+      'Raspberry Pi',
+      'Arduino',
+      'OpenCV',
+      'Homography',
+      'Inverse Kinematics',
+      'LLM integration',
+      'Python'],
       link: 'https://voyager-o.ca/'
     },
     {
@@ -19,6 +26,12 @@ export default function Projects() {
   ];
 
   const sideProjects = [
+    {
+      title: 'Voyager-O',
+      description: "NASA Space Apps project that led us to global nominees! Used three.js and NASA's star data to convert and simulate what the starry sky looks like on other planets. (Click the image to try the project!)",
+      image: '/projects/spaceapps.png',
+      tags: ['Three.js', 'Javascript', 'Fetch API', 'Frontend Development', 'WebGL'],
+    }
     {
       title: 'Curriculum Generator',
       description: 'Worked on during my summer internship at Wizrobotics. Worked on lesson component development using react to make widgets. Also restructured on the LangChain AI Agent that parses a pdf lesson into an interactive react lesson.',
